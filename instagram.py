@@ -10,33 +10,18 @@ from ElemFunctions import Email, Name, Username, Password
 
 # options.add_argument("--incognito")
 
-# prox = Proxy()
-# prox.proxy_type = ProxyType.MANUAL
-# prox.ssl_proxy = '189.187.184.232:8080'
+prox = Proxy()
+prox.proxy_type = ProxyType.MANUAL
+prox.ssl_proxy = '217.29.62.211:47979'
 
-# capabilities = webdriver.DesiredCapabilities.CHROME
+capabilities = webdriver.DesiredCapabilities.CHROME
 
-# prox.add_to_capabilities(capabilities)
+prox.add_to_capabilities(capabilities)
 
-driver = Chrome('C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe')#, desired_capabilities=capabilities)
+driver = Chrome('C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe', desired_capabilities=capabilities)
 #options=options)
 
-driver.get('https://www.instagram.com/')
-
-sleep(5)
-
-elem = driver.find_element_by_name('emailOrPhone')
-elem.send_keys(Email())
-
-sleep(5)
-
-elem = driver.find_element_by_name('fullName')
-elem.send_keys(Name())
-
-sleep(5)
-
-name_consol = driver.find_element_by_name('username')
-name_consol.send_keys(Username())
+driver.get('https://2ip.ru/')
 
 a = input()
 
